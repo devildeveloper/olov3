@@ -1,0 +1,186 @@
+extends ./layout/layout.jade
+block content
+  .popup
+    .close
+      img(src="imagenes/popup_x.png")
+    .column
+      img(src="imagenes/imagen_popup_123.png")
+    .column
+      form(method="POST",action="")
+        p ¡TE LLAMÁMOS GRATIS!
+        input(type="text",name="src",placeholder="Escribe tu número")
+        button(type="submit")
+          img(src="imagenes/boton_llamame_popup.png")
+  header
+    .wrapper
+      picture
+        //[if IE 9]><video style="display: none;"><![endif]
+        source(srcset="imagenes/logo.png",media="(all)")
+        //[if IE 9]></video><![endif]
+        img(src="imagenes/logo.png",alt="")
+      .right
+        .content
+          ul
+            li
+              a.st(href="#dsp") Dispositivos
+            li
+              a.st(href="#pl") Planes
+        .content
+          p si eres cliente llámanos al: (01) 706 8000
+          p Llámanos al:
+          p (01)640-9697
+  section(data-role="slider")
+    .follow.more
+        a(href="")
+          img(src="imagenes/te_llamamos_gratis.png")
+    .row
+      #slider
+        .content.c1(data-color="blue")
+          .wrapper
+            a.more(href="#")
+              img(src="imagenes/boton_mas_informacion.png")
+            picture
+              img(src="imagenes/poster1.png",alt="")
+        .content.c2(data-color="purple")
+          .wrapper
+            a.more(href="#")
+              img(src="imagenes/boton_mas_informacion.png")
+            picture
+              img(src="imagenes/poster2.png",alt="")
+        .content.c3(data-color="green")
+          .wrapper
+            a.more(href="#")
+              img(src="imagenes/boton_mas_informacion.png")
+            picture
+              img(src="imagenes/poster3.png",alt="")
+    .row
+      .triangle
+  section(data-role="dispositivos")
+    .title
+      .wrapper
+        h1#dsp NUESTROS DISPOSITIVOS
+    ul.wrapper#slick-dsp
+      li.dispositivo
+        .content
+          img(src="imagenes/olo_movil.png")
+          p.title OLO MÓVIL
+          p.body Mantente conectado de forma inalámbrica estando en movimiento.
+            | Duración de 6 horas diarias. Conexión hasta 5 dispositivos.
+          img(src="imagenes/precio_movil.png")
+          a.more(href="#")
+            img(src="imagenes/boton_quiero_este_olo.png")
+      li.dispositivo
+        .content
+          img(src="imagenes/olo_clasico.png")
+          p.title OLO CLÁSICO
+          p.body Ideal para la casa. Conexión de hasta 8 equipos. Diseño moderno y liviano
+            | No requiere de línea telefónica para su funcionamiento
+          img(src="imagenes/precio_clasico.png")
+          a.more(href="#")
+            img(src="imagenes/boton_quiero_este_olo.png")
+      li.dispositivo
+        .content
+          img(src="imagenes/olo_usb.png")
+          p.title OLO USB
+          p.body Mantente en línea a donde quiera que vayas, conectándose a 1 solo equipo.
+            | Es flexible, liviano y fácil de llevar.
+          img(src="imagenes/precio_usb.png")
+          a.more(href="#")
+            img(src="imagenes/boton_quiero_este_olo.png")
+      li.dispositivo
+        .content
+          img(src="imagenes/olo_mini.png")
+          p.title OLO MINI
+          p.body Mantente conectado de forma inalámbrica estando en movimiento. Hasta 6 horas diarias
+            | de duracion. Conexión hasta 8 productos WiFi.
+          img(src="imagenes/precio_mini.png")
+          a.more(href="#")
+            img(src="imagenes/boton_quiero_este_olo.png")
+      li.dispositivo
+        .content
+          img(src="imagenes/olo_fijo.png")
+          p.title OLO FIJO
+          p.body Ideal para la casa u oficina. Conexión de hasta 8 equipos wifi. Fácil de transportar.
+            | Cuenta con un puerto ethernet y un puerto lan.
+          img(src="imagenes/precio_fijo.png")
+          a.more(href="#")
+            img(src="imagenes/boton_quiero_este_olo.png")
+  section(data-role="planes")
+    .title
+      .wrapper
+        h1#pl PLANES RECOMENDADOS
+    ul.wrapper
+      li.plan
+        .content
+          .column
+            img(src="imagenes/plansemanal.png")
+          .column
+            p.title OLO SEMANAL
+            p.limit Hasta 1 Mega de velocidad
+            p DESCARGAS LIMITADAS
+            p.limit2 HASTA 1GB de descarga
+            img(src="imagenes/precio_planesemanal.png")
+            a.more(href="")
+              img(src="imagenes/boton_quiero_este_plan.png")
+            p.condicion Plan valido
+              br
+              |solo para el
+              br
+              | dispositivo USB
+      li.plan
+        .content
+          .column
+            img(src="imagenes/planmensual.png")
+          .column
+            p.title OLO MENSUAL
+            p.limit Hasta 1 Mega de velocidad
+            p DESCARGAS LIMITADAS
+            p.limit2 Hasta 3GB de descarga
+            img(src="imagenes/precio_planesemanal.png")
+            a.more(href="")
+              img(src="imagenes/boton_quiero_este_plan.png")
+            p.condicion Plan valido
+              br
+              |solo para el
+              br
+              | dispositivo USB
+      li.plan
+        .content
+          .column
+            img(src="imagenes/planeconomico.png")
+          .column
+            p.title OLO ECONÓMICO
+            p.limit Hasta 1 y 3 Megas de velocidad
+            p DESCARGAS ILIMITADAS
+            p.limit2 HASTA 1GB de descarga
+            img(src="imagenes/precio_planesemanal.png")
+            a.more(href="")
+              img(src="imagenes/boton_quiero_este_plan.png")
+      li.plan
+        .content
+          .column
+            img(src="imagenes/plantrabajador.png")
+          .column
+            p.title OLO TRABAJADOR
+            p.limit Hasta 1 y 3 Megas de velocidad
+            p DESCARGAS LIMITADAS
+            p.limit2 HASTA 3GB de descarga
+            img(src="imagenes/precio_planesemanal.png")
+            a.more(href="")
+              img(src="imagenes/boton_quiero_este_plan.png")
+      li.plan
+        .content
+          .column
+            img(src="imagenes/planrelax.png")
+          .column
+            p.title OLO RELAX
+            p.limit Hasta 1 Mega de velocidad
+            p DESCARGAS ILIMITADAS
+            p.limit2 Velocidad mínima garantizada 410Kbps
+            img(src="imagenes/precio_planesemanal.png")
+            a.more(href="")
+              img(src="imagenes/boton_quiero_este_plan.png")
+  footer
+    p Página promocional autorizada/
+    p Para mayor información visita: www.olo.pe
+  script(data-main="js/main",src="js/vendor/require.js",async)

@@ -1,0 +1,310 @@
+@require 'vendor/normalize.css'
+//colors
+$fontColor = green
+$grayDots = lightgray
+$gray1 = #6f6f6f
+$purple = #662d91
+$blue = #00aeef
+$green = #00a651
+//end
+//Clases
+.popup
+  display none
+  width 820px
+  margin-left -410px
+  left 50%
+  background-color $blue
+  position fixed
+  z-index 10
+  color white
+  margin-top 70px
+  .close
+    position absolute
+    top -22px
+    right -22px
+    cursor pointer
+  .column
+    display inline-block
+    vertical-align middle
+    width 50%
+    text-align center
+    &:last-child
+      p
+        font-size 2.44rem
+        font-weight bold
+        line-height 120%
+      input
+        font-size 1.16rem
+        line-height 120%
+        border-radius .8rem
+        margin-top 10px
+        margin-bottom 10px
+        color black
+        padding 10px
+        border 0
+      button
+        background-color transparent
+        border 0
+.title
+  color white
+  h1
+    font-size 2.22rem
+    padding-top 1.88rem
+    padding-bottom 1.33rem
+.wrapper
+  max-width 1280px
+  margin 0 auto
+.triangle
+  width 0
+  height 0
+  border-left 20px solid transparent
+  border-right 20px solid transparent
+  border-top 20px solid $blue
+  margin 0 auto
+
+.slick-dots
+  margin 0 auto
+  text-align center
+  margin-top 30px
+  bottom -60px
+  & li
+    margin-left .6rem
+    margin-right .6rem
+    &:nth-child(1)
+      button:before
+        background-color $blue
+    &:nth-child(2)
+      button:before
+        background-color $purple
+    &:nth-child(3)
+      button:before
+        background-color $green
+  & li.slick-active
+    button::before
+      color transparent
+  & li button::before
+    color transparent
+    width 20px
+    height 20px
+    background-color rgba(211,211,211,.6)
+    display inline-block
+    margin-left 4px
+    margin-right 4px
+    border-radius 50%
+    cursor pointer
+    &.active
+      background-color rgba(211,211,211,1)
+//end
+*
+  box-sizing border-box
+  margin 0
+  padding 0
+img
+  display block
+a
+  text-decoration none
+  color inherit
+h1,h2,h3,h4,h5,h6
+  line-height 120%
+  margin 0
+  text-align left
+  padding-left 10px
+section
+  margin-top 20px
+ul
+  margin 0
+  padding 0
+  li
+    list-style-type none
+body
+  margin 0 auto
+  font-size 18px
+  line-height 120%
+  color $fontColor
+  header
+    position fixed
+    top 0
+    left 0
+    right 0
+    margin-right auto
+    margin-left auto
+    background-color white
+    z-index 2
+    .wrapper
+      padding-bottom 10px
+      text-align right
+      picture
+        float left
+    .right
+      color $green
+      .content
+        display inline-block
+        vertical-align bottom
+        padding-left 1rem
+        padding-right 1rem
+        &:last-child
+          border-left 1px solid #606060
+          p
+            line-height 120%
+            &:first-child
+              font-size .88rem
+              color $gray1
+              &+p
+                color $green
+                font-size 1.33rem
+            &:last-child
+              font-size 2.3rem
+              color $green
+        li
+          display inline-block
+          margin-left .2rem
+          font-size .88rem
+          padding 10px
+          padding-left 20px
+          padding-right 20px
+          color white
+          cursor pointer
+          &:first-child
+            background-color $blue
+          &:last-child
+            background-color $purple
+  section[data-role="slider"]
+    padding-bottom 50px
+    color $grayDots
+    margin-top 100px
+    .follow
+      position fixed
+      top 230px
+      right 100px
+      z-index 9
+
+    .row
+      &:first-child
+        margin-top 90px
+      &:last-child
+        margin-top -30px
+    #slider
+      .wrapper
+        position relative
+      .more
+        position absolute
+        bottom 30px
+        right 290px
+      .content
+        &.c1
+          background-color $blue
+        &.c2
+          background-color $purple
+        &.c3
+          background-color $green
+      .wrapper
+        picture
+          display block
+          img
+            margin 0 auto
+  section[data-role="dispositivos"]
+    .wrapper
+      max-width 940px
+    padding-bottom 40px
+    text-align center
+    .title
+      background-color $blue
+    ul.wrapper
+      margin-top 20px
+      .dispositivo
+        display inline-block
+        padding 10px
+        width 33%
+        .content
+          background-color $blue
+          text-align center
+          padding 10px
+          a
+            img
+              margin-top 10px
+          .title
+            font-size 2.11rem
+            line-height 120%
+            margin-top 20px
+            margin-bottom 10px
+          .body
+            font-size .77rem
+          img
+            display block
+            margin 0 auto
+          p
+            color white
+    #slick-dsp
+      .slick-dots
+        bottom -40px
+        li
+          &:nth-child(1) button::before
+            background-color $blue
+          &:nth-child(2) button::before
+            background-color $blue
+          &:nth-child(3) button::before
+            background-color $blue
+  section[data-role="planes"]
+    .wrapper
+      max-width 940px
+    text-align center
+    .title
+      background-color $purple
+    ul.wrapper
+      margin-top 20px
+      .plan
+        display inline-block
+        width 50%
+        padding 10px
+        .content
+          background-color $purple
+          text-align left
+          color white
+          padding 10px
+          background-image url("../imagenes/tramas_planes.png")
+          background-position 0 0
+          p
+            color white
+          .column
+            display inline-block
+            vertical-align top
+            &:last-child
+              position relative
+              padding-left 10px
+              color white
+              text-align center
+              font-size .66rem
+              width 50%
+              img
+                display block
+                margin 0 auto
+                margin-top 4px
+              .title
+                font-size 1.11rem
+              .limit
+                background-color white
+                color $purple
+              .limit2
+                font-size .55rem
+                line-height 120%
+              .condicion
+                font-size .55rem
+                bottom: 30px;
+                line-height: 120%;
+                position: absolute;
+                text-align: left;
+  footer
+    background-image url("../imagenes/piedepagina.jpg")
+    background-position center top
+    background-repeat no-repeat
+    padding-top 25px
+    padding-bottom 25px
+    text-align center
+    p
+      color white
+      margin 0
+      padding 0
+      display inline-block
+      font-size .88rem
+      &:first-child
+        text-transform uppercase
